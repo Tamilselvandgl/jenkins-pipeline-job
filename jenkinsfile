@@ -1,0 +1,19 @@
+pipeline {
+agent {
+  label  "java-agent-slave"
+    }
+stages {
+  stage ("first"){
+    steps {
+     echo "vanakkam"   
+        }
+       }
+  stage ("second"){
+    steps {
+    echo "da mapla"    
+         }
+       }
+  
+}
+
+}
