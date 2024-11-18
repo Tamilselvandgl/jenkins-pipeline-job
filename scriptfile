@@ -1,0 +1,36 @@
+pipeline {
+  agent {
+    label 'java-agent-slave'
+  }
+
+  stages {
+
+       stage ('build'){
+        steps {
+            echo 'vanakkam'
+        }
+     }
+
+     stage ('script stage'){
+        steps {
+            echo 'ithu scriptu'
+            script {
+                def course = 'k8'
+                if (course == 'k8'){
+                println ("thanks da mapla $course")    
+                }
+
+            else
+            println ("padi da parama")
+
+            }
+
+        }
+     }
+
+
+
+  }
+
+
+}
