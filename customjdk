@@ -12,7 +12,7 @@ pipeline{
         }
         stage('specific java'){
             tools{
-                java 'JDK-17'
+                jdk 'JDK-17'
             }
             steps{
                 echo "maven version with java /opt/jdk-17"
