@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage('maven'){
+            steps{
+                echo "maven version enna"
+                sh 'mvn --version'
+            }
+        }
+    }
+}
