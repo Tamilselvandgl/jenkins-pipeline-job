@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("timeout test"){
             steps{
-                timeout(time:5 unit: 'seconds'){
+                timeout(time:5, unit:'seconds'){
                     echo "sleep for 60 sec"
                     sleep 60
             
