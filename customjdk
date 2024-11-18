@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven path'
+    }
+    stages{
+        stage('maven'){
+            steps{
+                echo "maven version with default java path"
+                sh 'mvn --version'
+            }
+        }
+        stage('specific java'){
+            tools{
+                java 'JDK-17'
+            }
+            steps{
+                echo "maven version with java /opt/jdk-17"
+                sh 'mvn --version'
+            }
+        }
+    }
+}
