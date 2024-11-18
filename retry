@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages{
+        stage('build'){
+            steps {
+                echo "entering to build block"
+                retry (3){
+                echo "execute process"
+                error "retrying to execute"   
+                }
+                echo "after 3 attempts of retry"
+            }
+        }
+    }
+}
