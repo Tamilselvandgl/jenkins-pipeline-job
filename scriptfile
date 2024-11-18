@@ -16,7 +16,7 @@ pipeline {
             echo 'ithu scriptu'
             script {
                 def course = 'k8'
-                if (course == 'k8'){
+                if (course == 'k8s'){
                 println ("thanks da mapla $course")    
                 }
 
